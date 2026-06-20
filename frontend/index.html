@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NyayaLens - AI Legal Document Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HERO SECTION -->
+
+        <div class="hero">
+
+            <h1>⚖️ NyayaLens</h1>
+
+            <p>
+                AI-Powered Legal Document Analyzer & Contract Intelligence Platform
+            </p>
+
+        </div>
+
+        <!-- STATS SECTION -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <i class="fa-solid fa-file-contract"></i>
+                <h3>Documents</h3>
+                <p>Unlimited</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Legal Analysis</h3>
+                <p>Instant</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-robot"></i>
+                <h3>AI Assistant</h3>
+                <p>Active</p>
+            </div>
+
+        </div>
+
+        <!-- UPLOAD CARD -->
+
+        <div class="card">
+
+            <div class="card-header">
+                <i class="fa-solid fa-upload"></i>
+                <h2>Upload Legal Document</h2>
+            </div>
+
+            <p class="subtitle">
+                Upload PDF or DOCX agreements for analysis.
+            </p>
+
+            <input
+                type="file"
+                id="fileInput"
+            >
+
+            <button onclick="uploadFile()">
+                Upload & Analyze
+            </button>
+
+        </div>
+
+        <!-- ANALYSIS CARD -->
+
+        <div class="card">
+
+            <div class="card-header">
+                <i class="fa-solid fa-brain"></i>
+                <h2>Document Analysis</h2>
+            </div>
+
+            <pre id="analysisResult">
+Upload a document to generate legal insights...
+            </pre>
+
+        </div>
+
+        <!-- Q&A CARD -->
+
+        <div class="card">
+
+            <div class="card-header">
+                <i class="fa-solid fa-comments"></i>
+                <h2>Ask Questions</h2>
+            </div>
+
+            <p class="subtitle">
+                Ask questions related to the uploaded legal document.
+            </p>
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Example: Can the landlord increase the rent?"
+            >
+
+            <button onclick="askQuestion()">
+                Ask AI
+            </button>
+
+            <pre id="answerResult">
+Ask a question to get an answer...
+            </pre>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                © 2026 NyayaLens | AI Legal Assistant
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

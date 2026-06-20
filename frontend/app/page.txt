@@ -1,0 +1,50 @@
+"use client";
+
+import { useState } from "react";
+import axios from "axios";
+
+export default function Home() {
+
+  const [file, setFile] = useState(null);
+  const [result, setResult] = useState("");
+
+  const upload = async () => {
+
+    const formData = new FormData();
+
+    formData.append("file", file);
+
+    const response = await axios.post(
+      "http://localhost:8000/upload",
+      formData
+    );
+
+    setResult(response.data.analysis);
+  };
+
+  return (
+    <div className="p-10">
+
+      <h1 className="text-3xl font-bold">
+        NyayaLens
+      </h1>
+
+      <input
+        type="file"
+        onChange={(e:any)=>
+          setFile(e.target.files[0])
+        }
+      />
+
+      <button
+        onClick={upload}
+        className="bg-purple-600 text-white px-4 py-2"
+      >
+        Analyze
+      </button>
+
+      <pre>{result}</pre>
+
+    </div>
+  );
+}
